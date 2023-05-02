@@ -109,10 +109,10 @@ def data_config(parser):
     parser.add_argument("--tensorboard_logdir", default="tensorboard_logdir")
     parser.add_argument(
         "--init_checkpoint",
-        default="mt_dnn_models/bert_model_base_uncased.pt",
+        default="mt_dnn_models/mt_dnn_large_uncased.pt",
         type=str,
     )
-    parser.add_argument("--data_dir", default="data/canonical_data/bert_uncased_lower")
+    parser.add_argument("--data_dir", default="data/canonical_data/bert-base-uncased")
     parser.add_argument("--data_sort_on", action="store_true")
     parser.add_argument("--name", default="farmer")
     parser.add_argument(
@@ -143,7 +143,7 @@ def train_config(parser):
     parser.add_argument("--save_per_updates", type=int, default=10000)
     parser.add_argument("--save_per_updates_on", action="store_true")
     parser.add_argument("--epochs", type=int, default=5)
-    parser.add_argument("--batch_size", type=int, default=8)
+    parser.add_argument("--batch_size", type=int, default=4)
     parser.add_argument("--batch_size_eval", type=int, default=8)
     parser.add_argument(
         "--optimizer",

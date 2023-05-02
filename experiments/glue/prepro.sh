@@ -9,7 +9,7 @@
 python experiments/glue/glue_prepro.py
 
 
-declare -a PLMS=('bert-base-uncased' 'roberta-base' 'microsoft/deberta-base' 't5-base')
+declare -a PLMS=('bert-base-uncased')
 
 # prepro GLUE data for all PLMs.
 for plm in "${PLMS[@]}"
